@@ -1,9 +1,9 @@
-# Artwork & NFT License
+# Artwork License
 
 © 2026 Cameron Mansanarez / noir_mak  
 All Rights Reserved.
 
-All artwork, generative outputs, NFT imagery, animations, visual compositions,
+All artwork, generative outputs, animations, visual compositions,
 AI-assisted media, metadata design, branding, and associated creative assets
 within this project are licensed separately from the software code.
 
@@ -20,17 +20,10 @@ You may:
 
 You may NOT:
 
-- Commercially reproduce or resell the artwork outside official NFT ownership
+- Commercially reproduce, resell, or redistribute the artwork
 - Modify, remix, or create derivative works
 - Use the artwork or datasets for AI training
-- Mint unofficial derivative NFTs
 - Remove attribution or authorship information
-
-NFT Ownership Notice:
-Ownership of an NFT grants the holder ownership of the token itself and a
-limited personal display license for the associated artwork. Ownership does
-not transfer intellectual property rights, copyright, or commercial licensing
-rights unless explicitly granted in writing by the artist.
 
 For licensing, exhibitions, collaborations, or commercial inquiries:
 
