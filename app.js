@@ -129,7 +129,7 @@ app.post('/mail', async (req, res) => {
 
 app.use((err, req, res, next) => {
     console.error(err.message);
-    res.render('error');
+    res.status(404).render('error');
 });
 
 try {
