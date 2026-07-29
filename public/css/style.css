@@ -475,13 +475,6 @@ button {
     z-index: 1;
 }
 
-.archive-title {
-    font-size: 3rem;
-    color: var(--white);
-    margin-bottom: 3rem;
-    line-height: 1.1;
-}
-
 .project-card {
     background-color: var(--black);
     border-width: 1px;
@@ -541,17 +534,26 @@ button {
     height: 100%;
 }
 
+.gallery-img-btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 .gallery-img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
     border-radius: 0;
-    cursor: pointer;
     transition: opacity 0.2s ease;
 }
 
-.gallery-img:hover {
+.gallery-img-btn:hover .gallery-img,
+.gallery-img-btn:focus-visible .gallery-img {
     opacity: 0.85;
 }
 
@@ -689,7 +691,7 @@ button {
 }
 
 .form-control::placeholder {
-    color: rgba(245, 245, 245, 0.35);
+    color: rgba(245, 245, 245, 0.55);
 }
 
 .form-select option {

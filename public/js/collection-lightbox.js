@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalEl = document.getElementById('galleryLightbox');
     if (!modalEl) return;
 
-    const thumbnails = Array.from(document.querySelectorAll('.gallery-img'));
+    const thumbnails = Array.from(document.querySelectorAll('.gallery-img-btn'));
     const lightboxImage = document.getElementById('lightboxImage');
     const lightboxPrompt = document.getElementById('lightboxPrompt');
     const lightboxNumeral = document.getElementById('lightboxNumeral');
@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function showAt(index) {
         currentIndex = (index + thumbnails.length) % thumbnails.length;
         const thumb = thumbnails[currentIndex];
-        lightboxImage.src = thumb.src;
-        lightboxImage.alt = thumb.alt;
+        const img = thumb.querySelector('img');
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
         lightboxPrompt.textContent = thumb.dataset.prompt;
         lightboxNumeral.textContent = thumb.dataset.numeral;
     }

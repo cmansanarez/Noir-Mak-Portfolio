@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <%- include('head', { title: 'Redacted Bodies | Noir Mak', description: 'Redacted Bodies — a generative art project by Noir Mak exploring queer identity, censorship, surveillance, and digital embodiment through a custom LoRA model trained on FLUX.' }) %>
 
     <body>
@@ -93,7 +93,9 @@
                         <% gallery.forEach((piece, index) => { %>
                         <div class="col-lg-4 col-md-6 project-card-wrapper" style="--card-delay: <%= index * 0.08 %>s">
                             <div class="project-card gallery-card <%= galleryAccents[index % 4] %>">
-                                <img src="/images/<%= piece.image %>" alt="Redacted Bodies — generated piece <%= piece.numeral %>" class="gallery-img" width="512" height="512" loading="lazy" data-bs-toggle="modal" data-bs-target="#galleryLightbox" data-numeral="<%= piece.numeral %>" data-prompt="<%= piece.prompt %>">
+                                <button type="button" class="gallery-img-btn" data-bs-toggle="modal" data-bs-target="#galleryLightbox" data-numeral="<%= piece.numeral %>" data-prompt="<%= piece.prompt %>" aria-label="View Redacted Bodies — <%= piece.numeral %> full size">
+                                    <img src="/images/<%= piece.image %>" alt="Redacted Bodies — generated piece <%= piece.numeral %>" class="gallery-img" width="512" height="512" loading="lazy">
+                                </button>
                                 <p class="gallery-caption">Redacted Bodies — <%= piece.numeral %></p>
                                 <p class="gallery-prompt"><%= piece.prompt %></p>
                             </div>

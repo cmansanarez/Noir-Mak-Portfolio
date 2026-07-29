@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <%- include('head', { title: 'Contact | Noir Mak', description: 'Get in touch with Noir Mak — open to exhibitions, residencies, commissions, and collaborative work.' }) %>
 
     <body>
@@ -28,6 +28,7 @@
                         <!-- NAME -->
                         <div class="row mb-4">
                             <div class="col">
+                                <label for="name" class="visually-hidden">Full Name</label>
                                 <input type="text" id="name" class="form-control" placeholder="Full Name" required>
                                 <div class="invalid-feedback">Don't be a stranger — we'll need your name.</div>
                             </div>
@@ -36,6 +37,7 @@
                         <!-- EMAIL -->
                         <div class="row mb-4">
                             <div class="col">
+                                <label for="mail" class="visually-hidden">Email Address</label>
                                 <input type="email" id="mail" class="form-control" placeholder="Email Address" required>
                                 <div class="invalid-feedback">That signal's garbled — try name@example.com</div>
                             </div>
@@ -44,6 +46,7 @@
                         <!-- INQUIRY TYPE -->
                         <div class="row mb-4">
                             <div class="col">
+                                <label for="inquiry-type" class="visually-hidden">Type of Inquiry</label>
                                 <select id="inquiry-type" class="form-select" required>
                                     <option value="" disabled selected>Type of Inquiry</option>
                                     <option value="collaboration">Collaboration</option>
@@ -58,6 +61,7 @@
                         <!-- MESSAGE -->
                         <div class="row mb-4">
                             <div class="col">
+                                <label for="msg" class="visually-hidden">Your Message</label>
                                 <textarea id="msg" class="form-control" placeholder="Your Message" rows="6" required></textarea>
                                 <div class="invalid-feedback">Don't be shy. Say something.</div>
                             </div>
@@ -70,7 +74,7 @@
                             </div>
                         </div>
 
-                        <div id="contact-button-response"></div>
+                        <div id="contact-button-response" aria-live="polite"></div>
 
                     </form>
 
