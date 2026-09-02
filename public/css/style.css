@@ -124,6 +124,10 @@ button {
     animation: logo-bloom-pulse 2s ease-in-out infinite;
 }
 
+.event-details {
+    margin-top: 1.5rem;
+}
+
 @keyframes logo-bloom-pulse {
     0%, 100% { filter: drop-shadow(0 0 20px rgba(188, 248, 4, 0.85)) drop-shadow(0 0 50px rgba(255, 29, 137, 0.35)); }
     50%       { filter: drop-shadow(0 0 20px rgba(255, 29, 137, 0.85)) drop-shadow(0 0 50px rgba(188, 248, 4, 0.35)); }
