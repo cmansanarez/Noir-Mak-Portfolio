@@ -8,15 +8,15 @@ import express from 'express';
 const app = express();
 const port = process.env.PORT || 3000;
 
-const FEATURED_PROJECT_ID = parseInt(process.env.FEATURED_PROJECT_ID) || 10;
+const FEATURED_PROJECT_ID = parseInt(process.env.FEATURED_PROJECT_ID) || 11;
 
 const FALLBACK_FEATURED = {
-    id: 10,
-    name: 'Signal Bloom',
-    image: 'signal-bloom-poster-web.webp',
-    description: 'A modular AI-assisted live visual performance environment merging Hydra live coding, generative AI imagery via ComfyUI, and audio-reactive systems into a unified performance instrument. The project investigates what happens when AI generation itself becomes performative — treating image creation not as a pre-authored asset, but as an event that unfolds in real time through improvisation between human and machine.',
-    url: 'https://signal-bloom.noirmak.com',
-    tags: ['Live Coding', 'Generative Art', 'AI-Assisted', 'Audio Reactive', 'Hydra', 'ComfyUI', 'Performance']
+    id: 11,
+    name: 'Glitchtober 2026',
+    image: 'glitchtober.png',
+    description: 'A month-long exploration of glitch art, generative visuals, and digital nostalgia, created using Signal Bloom. Inspired by 1990s counterculture and early internet aesthetics, the collection explores identity, technology, and transformation through daily creative experiments.',
+    url: 'https://glitchtober.noirmak.com',
+    tags: ['Signal Bloom', 'Three.js', 'Hydra', 'JavaScript', 'Glitch Art', 'Generative Art', 'Creative Coding']
 };
 
 const FALLBACK_PROJECTS = [
@@ -28,7 +28,9 @@ const FALLBACK_PROJECTS = [
     { id: 6, name: 'Noise Palette', image: 'noirmak-noise-palette.jpg', description: 'A browser-based creative tool for generating glitch-inspired artworks through noise, color, and procedural drawing systems. By blending user input with algorithmic intervention, Noise Palette transforms digital painting into an unpredictable dialogue between artist and machine.', url: 'https://noise-palette.noirmak.com/', tags: ['Creative Tool', 'Glitch Art', 'Interactive', 'Generative Art', 'JavaScript', 'HTML5 Canvas', 'Procedural Graphics'] },
     { id: 7, name: 'Atmos Index', image: 'noirmak-atmos-index.jpg', description: 'A location-aware generative artwork that transforms local time and atmospheric conditions into a personalized digital sky. Real-world environmental data drives evolving cloud formations, daylight transitions, and celestial elements, creating a unique visualization for every viewer.', url: 'https://atmosindex.noirmak.com/', tags: ['Generative Art', 'Data Visualization', 'Interactive', 'Particle Systems', 'JavaScript'] },
     { id: 8, name: 'Stitched in Code', image: 'noirmak-web-stitched-in-code.jpg', description: 'A digital holiday card that combines glitch art, ASCII-inspired visuals, and creative coding to transform a seasonal greeting into an interactive artwork. Created as a gift for friends and family, the project explores code as a medium for expression, play, and connection.', url: 'https://stitchedincode.noirmak.com/', tags: ['Glitch Art', 'ASCII Art', 'Digital Art', 'JavaScript', 'HTML/CSS'] },
-    { id: 9, name: 'Lumyn', image: 'noirmak-lumyn-web.jpg', description: 'A web-based generative art platform that uses a fine-tuned language model to create personalized poetry and color metaphors from participant responses celebrating identity, resilience, and inner beauty. The project explores the intersection of AI, creative coding, and interactive storytelling as tools for reflection and emotional connection.', url: 'https://lumyn.noirmak.com/', tags: ['Generative AI', 'Interactive', 'Digital Poetry', 'Creative Technology', 'Web Experience', 'JavaScript', 'Node.js', 'Express.js', 'LLM Integration'] }
+    { id: 9, name: 'Lumyn', image: 'noirmak-lumyn-web.jpg', description: 'A web-based generative art platform that uses a fine-tuned language model to create personalized poetry and color metaphors from participant responses celebrating identity, resilience, and inner beauty. The project explores the intersection of AI, creative coding, and interactive storytelling as tools for reflection and emotional connection.', url: 'https://lumyn.noirmak.com/', tags: ['Generative AI', 'Interactive', 'Digital Poetry', 'Creative Technology', 'Web Experience', 'JavaScript', 'Node.js', 'Express.js', 'LLM Integration'] },
+    { id: 10, name: 'Signal Bloom', image: 'signal-bloom-poster-web.webp', description: 'A modular AI-assisted live visual performance environment merging Hydra live coding, generative AI imagery via ComfyUI, and audio-reactive systems into a unified performance instrument. The project investigates what happens when AI generation itself becomes performative — treating image creation not as a pre-authored asset, but as an event that unfolds in real time through improvisation between human and machine.', url: 'https://signal-bloom.noirmak.com', tags: ['Live Coding', 'Generative Art', 'AI-Assisted', 'Audio Reactive', 'Hydra', 'ComfyUI', 'Performance'] },
+    { id: 11, name: 'Glitchtober 2026', image: 'glitchtober.png', description: 'A month-long exploration of glitch art, generative visuals, and digital nostalgia, created using Signal Bloom. Inspired by 1990s counterculture and early internet aesthetics, the collection explores identity, technology, and transformation through daily creative experiments.', url: 'https://glitchtober.noirmak.com', tags: ['Signal Bloom', 'Three.js', 'Hydra', 'JavaScript', 'Glitch Art', 'Generative Art', 'Creative Coding'] }
 ];
 
 const FALLBACK_GALLERY = [
